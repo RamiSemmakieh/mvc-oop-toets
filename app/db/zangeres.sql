@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 21 feb 2023 om 11:21
--- Serverversie: 8.0.32
--- PHP-versie: 8.1.10
+-- Gegenereerd op: 14 mrt 2023 om 10:48
+-- Serverversie: 8.0.31
+-- PHP-versie: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,34 +18,25 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mvc-2209a`
+-- Database: `mvc-oop-toets`
 --
-CREATE DATABASE IF NOT EXISTS `mvc-2209a` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `mvc-2209a`;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `Country`
+-- Tabelstructuur voor tabel `zangeres`
 --
 
-DROP TABLE IF EXISTS `Country`;
-CREATE TABLE IF NOT EXISTS `Country` (
-  `Id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `Name` varchar(200) NOT NULL,
+DROP TABLE IF EXISTS `zangeres`;
+CREATE TABLE IF NOT EXISTS `zangeres` (
+  `Id` tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Naam` varchar(100) NOT NULL,
+  `NettoWaarde` smallint NOT NULL,
+  `Land` varchar(100) NOT NULL,
+  `Mobiel` varchar(20) NOT NULL,
+  `Leeftijd` tinyint NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Gegevens worden geëxporteerd voor tabel `Country`
---
-
-INSERT INTO `Country` (`Id`, `Name`) VALUES
-(1, 'Nederland'),
-(2, 'Duitsland'),
-(3, 'Luxemburg'),
-(4, 'Frankrijk'),
-(5, 'Spanje');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
